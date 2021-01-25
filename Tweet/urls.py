@@ -26,7 +26,7 @@ from accounts.views import (
 from Tweets.views import (
     tweet_list_view,
     tweet_detail_view,
-    tweet_profile_view
+    
     )
 
 urlpatterns = [
@@ -36,7 +36,7 @@ urlpatterns = [
     path('logout/', logout_view),
     path('register/', register_view),
     path('<int:tweet_id>', tweet_detail_view),
-    path('profile/<str:username>', tweet_profile_view),
+    re_path(r'profiles?/', include('profiles.urls')),
     path('api/tweets/', include('Tweets.api.urls'))
 ]
 

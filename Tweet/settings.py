@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     # internal
+    'profiles',
     'accounts',
     'Tweets',
 ]
